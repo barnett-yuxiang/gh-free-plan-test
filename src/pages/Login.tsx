@@ -33,29 +33,34 @@ const Login: React.FC = () => {
   return (
     <div className="login-container">
       <form onSubmit={handleSubmit}>
-        <h2>Login</h2>
+        <h1 className="login-title">Welcome Back</h1>
+        <p className="login-subtitle">Please sign in to continue</p>
+
         {error && <div className="error">{error}</div>}
+
         <div className="form-group">
           <input
             type="text"
             name="username"
             value={formData.username}
             onChange={handleChange}
-            placeholder="Username"
+            placeholder="Enter your username"
             required
           />
         </div>
+
         <div className="form-group">
           <input
             type="password"
             name="password"
             value={formData.password}
             onChange={handleChange}
-            placeholder="Password"
+            placeholder="Enter your password"
             required
           />
         </div>
-        <button type="submit">Login</button>
+
+        <button type="submit">Sign In</button>
       </form>
     </div>
   );
